@@ -41,7 +41,7 @@ jobs:
           DB_DATABASE: database/database.mysql
         run: php artisan test
 
-      # SSH into EC2, update code, and run docker-compose (Nginx + PHP + MySQL)
+      # 3. SSH into EC2 & Deploy with Docker Compose
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -49,7 +49,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            # Apne server par us folder mein jayein jahan aapka project aur docker-compose.yml rakha hai
             cd /home/ubuntu/your-project-folder
+
+            # GitHub se latest code pull karein taaki docker-compose aur nginx ki config update ho jaye
             git pull origin main
+
+            # Purane containers ko band karke docker-compose se Nginx + PHP dono ko ek sath build aur start karein
             docker compose down
             docker compose up -d --build
