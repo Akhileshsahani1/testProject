@@ -52,7 +52,7 @@ jobs:
 
             cd /home/ubuntu/testProject
 
-            # GitHub se latest code pull karein taaki docker-compose aur nginx ki config update ho jaye
+            
             git pull origin main
 
             # Purane containers ko band karke docker-compose se Nginx + PHP dono ko ek sath build aur start karein
