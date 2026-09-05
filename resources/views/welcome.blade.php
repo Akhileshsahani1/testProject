@@ -19,6 +19,6 @@
     </head>
     <body class="text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
           <h1 class="text-4xl font-bold mb-4 ">Welcome to Our Application</h1>
-          <p class="text-lg mb-6">This is the welcome page of our applications docker 
+          <p class="text-lg mb-6">This is the welcome page of our applications docker automation project. You can customize this page as per your requirements.</p>
     </body>
 </html>
