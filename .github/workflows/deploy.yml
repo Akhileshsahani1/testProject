@@ -49,8 +49,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # Apne server par us folder mein jayein jahan aapka project aur docker-compose.yml rakha hai
-            cd /home/ubuntu/your-project-folder
+
+            cd /home/ubuntu/testProject
 
             # GitHub se latest code pull karein taaki docker-compose aur nginx ki config update ho jaye
             git pull origin main
